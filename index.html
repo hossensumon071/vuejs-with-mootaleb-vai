@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="content">
+        <input type="text" v-model="name">
+        <p v-bind:title="name">your name : {{ name }}</p>
+        <a :href="profile.url" :title="profile.title">{{ profile.name }}</a>
+    </div>
+
+
+
+
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+   let app =  new Vue({
+        el: ".content",
+        data: {
+            name: "sumon hossen",
+            ssit: "Smart Soft IT",
+            profile: {
+                name: "facebook",
+                url: "https://www.facebook.com/profile.php?id=100019375008455",
+                title: "Go to facebook page"
+
+            },
+            class: "active"
+        }
+    });
+</script>
+</body>
+</html>
